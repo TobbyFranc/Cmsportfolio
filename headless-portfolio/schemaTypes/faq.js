@@ -1,0 +1,1 @@
+export default{name: "faq",type: "faq", fields: [{question: string}, {answer: text}, {order: number}]}
