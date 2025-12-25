@@ -1,16 +1,51 @@
-# React + Vite
+# 🚀 Headless CMS Portfolio (React + Vite + Sanity)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is my **transition from hardcoded websites into the headless CMS ecosystem**.  
+It demonstrates how content can be managed dynamically in **Sanity CMS** while being rendered through a fast, modern **React + Vite frontend**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎯 Purpose
 
-## React Compiler
+- Showcase my ability to **integrate a headless CMS** into a modern frontend stack.  
+- Move away from static, hardcoded sites toward **scalable, editable, and dynamic content systems**.  
+- Highlight creative storytelling sections (sticky scroll, hobbies stack, impact metrics, FAQs) that are **CMS‑driven but resilient with fallbacks**.  
+- Position myself for opportunities in **modern web development, JAMstack, and content‑driven applications**.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Sanity CMS Integration**: All content (FAQs, hobbies, impact metrics) editable in Sanity Studio.  
+- **Fallback Content**: Local assets (`knowme.png`, `Toonme.png`, `HeroMobile.png`, `HeroImg.png`) ensure reliability if CMS data is missing.  
+- **Sticky Split Scroll**: Text and visuals synced in a cinematic storytelling layout.  
+- **Hobbies Stack**: Interactive card stack with hover animations, images editable via CMS.  
+- **Impact Metrics**: Auto‑counting stats (subscribers, reach, projects).  
+- **FAQ Accordion**: CMS‑driven questions with a hardcoded Contact FAQ linking to the contact page.  
+- **Framer Motion Animations**: Smooth transitions and interactivity.  
+- **TailwindCSS Styling**: Responsive and modern UI.
+
+---
+
+## 🗂️ Tech Stack
+
+- **Frontend**: React + Vite  
+- **CMS**: Sanity.io  
+- **Styling**: TailwindCSS  
+- **Animations**: Framer Motion  
+- **Version Control**: Git + GitHub  
+
+---
+
+## 🚀 Getting Started
+
+```bash
+# Clone the repo
+git clone https://github.com/your-username/headless-cms-portfolio.git
+cd headless-cms-portfolio
+
+# Install dependencies
+npm install
+
+# Run locally
+npm run dev
