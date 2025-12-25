@@ -3,6 +3,8 @@ import { client } from "../sanity/client";
 import Nav from "./Nav";
 import Footer from "./Footer";
 
+// Tghis Layout component fetches navigation and footer data from Sanity CMS
+
 export default function Layout({ children }) {
   const [navData, setNavData] = useState(null);
   const [footerData, setFooterData] = useState(null);

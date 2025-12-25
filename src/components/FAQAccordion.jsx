@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom"; // for navigation to contact page
+import { Link } from "react-router-dom"; 
 import { client } from "../sanity/client";
 
 const query = `*[_type == "faq"] | order(order asc){

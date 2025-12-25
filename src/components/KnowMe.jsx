@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { client } from "../sanity/client"; //
+import { client } from "../sanity/client"; 
 import { urlFor } from "../sanity/imageBuilder";
 import crown from "../assets/crown.png";
-import fallbackBg from "../assets/knowme.png"; // 
+import fallbackBg from "../assets/knowme.png"; 
 
 export default function KnowMe() {
   const [data, setData] = useState(null);
@@ -24,7 +24,7 @@ export default function KnowMe() {
     ? urlFor(data.bgImage).width(1600).url()
     : fallbackBg;
 
-  // Split title into words so we can decorate "Me"
+  // Split title into words so we can decorate "Me" in the Headr for crown placement
   const words = data?.title
     ? data.title.split(" ")
     : ["Get", "To", "Know", "Me"];

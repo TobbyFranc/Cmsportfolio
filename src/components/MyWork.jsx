@@ -28,6 +28,8 @@ export default function MyWork() {
 
   if (!data) return null;
 
+//   Function to get icon component based on string
+
   const getIcon = (icon) => {
     switch (icon) {
       case "video":

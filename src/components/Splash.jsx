@@ -11,7 +11,7 @@ export default function Splash({ children }) {
   if (loading) {
     return (
       <div className="flex items-center justify-center h-screen bg-background text-primary">
-        <h1 className="text-4xl font-bold animate-pulse">MySite</h1>
+        <h1 className="text-4xl font-bold animate-pulse">Doxxie</h1>
       </div>
     );
   }
