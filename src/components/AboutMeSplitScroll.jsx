@@ -61,33 +61,40 @@ export default function AboutMeStickyScroll({ sections = [] }) {
   }
 
   // Desktop: sticky split scroll
+  function TextBlock({ section, idx, setActiveIndex }) {
+    const ref = useRef(null);
+    const inView = useInView(ref, { amount: 0.5, once: false });
+
+    useEffect(() => {
+      if (inView) setActiveIndex(idx);
+    }, [inView, idx, setActiveIndex]);
+
+    return (
+      <motion.div
+        ref={ref}
+        className="min-h-screen flex flex-col items-center justify-center px-12 text-center"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: false, amount: 0.5 }}
+      >
+        <h2 className="text-3xl font-bold mb-6">{section.title}</h2>
+        <p className="text-lg opacity-80 max-w-md">{section.description}</p>
+      </motion.div>
+    );
+  }
   return (
     <section id="aboutme-split" className="grid md:grid-cols-2 w-full">
       {/* Left side: text blocks */}
       <div className="flex flex-col">
-        {sections.map((section, idx) => {
-          const ref = useRef(null);
-          const inView = useInView(ref, { amount: 0.5, once: false });
-
-          useEffect(() => {
-            if (inView) setActiveIndex(idx);
-          }, [inView, idx]);
-
-          return (
-            <motion.div
-              ref={ref}
-              key={idx}
-              className="min-h-screen flex flex-col items-center justify-center px-12 text-center"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: false, amount: 0.5 }}
-            >
-              <h2 className="text-3xl font-bold mb-6">{section.title}</h2>
-              <p className="text-lg opacity-80 max-w-md">{section.description}</p>
-            </motion.div>
-          );
-        })}
+        {sections.map((section, idx) => (
+          <TextBlock
+            key={idx}
+            section={section}
+            idx={idx}
+            setActiveIndex={setActiveIndex}
+          />
+        ))}
       </div>
 
       {/* Right side: sticky image with parallax */}

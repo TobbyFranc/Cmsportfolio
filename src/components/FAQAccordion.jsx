@@ -27,17 +27,18 @@ export default function FAQAccordion({ faqs = [] }) {
               </span>
             </button>
             <AnimatePresence>
-              {activeIndex === idx && (
-                <motion.p
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: "auto" }}
-                  exit={{ opacity: 0, height: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="mt-3 text-gray-700 dark:text-gray-300"
-                >
-                  {faq.answer}
-                </motion.p>
-              )}
+                {activeIndex === idx && (
+                  <motion.p
+                    initial={{ opacity: 0, scaleY: 0 }}
+                    animate={{ opacity: 1, scaleY: 1 }}
+                    exit={{ opacity: 0, scaleY: 0 }}
+                    transition={{ duration: 0.22 }}
+                    style={{ transformOrigin: "top" }}
+                    className="mt-3 text-gray-700 dark:text-gray-300 break-words whitespace-normal overflow-hidden"
+                  >
+                    {faq.answer}
+                  </motion.p>
+                )}
             </AnimatePresence>
           </div>
         ))}

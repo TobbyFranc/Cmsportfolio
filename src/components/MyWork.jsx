@@ -95,6 +95,8 @@ export default function MyWork() {
         {data?.intro}
       </motion.p>
 
+      {/* cards components below */}
+
       <div className="flex flex-col gap-16 max-w-6xl mx-auto">
         {data.projects?.map((project, idx) => {
           const isEven = idx % 2 === 0;
