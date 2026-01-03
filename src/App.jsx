@@ -2,7 +2,7 @@ import React, { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 
-// const Hero = lazy(() => import("./components/Hero"));
+// Lazy load pages
 const About = lazy(() => import("./pages/AboutMe"));
 const Projects = lazy(() => import("./components/Projects"));
 const Services = lazy(() => import("./components/Services"));
@@ -14,9 +14,9 @@ const AboutMe = lazy(() => import("./pages/AboutMe"));
 export default function App() {
   return (
     <Layout>
-      <Suspense fallback={<p className="mt-24 text-center p-8">Working on it...</p>}>
+      <Suspense 
+        fallback={<p className="mt-24 text-center p-8">Building...</p>}>
         <Routes>
-          {/* <Route path="/" element={<Hero />} /> */}
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
